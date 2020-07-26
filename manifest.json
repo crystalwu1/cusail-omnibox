@@ -1,33 +1,15 @@
 {
   "name": "CUSail Omnibox",
   "description": "Type 'cusail' plus a keyword to link to the corresponding webpage",
-  "version": "1.0",
+  "version": "2.0",
   "background": {
     "page": "background.html",
     "persistent": false
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["app.js"],
-      "run_at": "document_end"
-    }
-  ],
-  "omnibox": {"keyword": "cusail"},
-  "permissions": [
-    "identity",
-    "activeTab",
-    "<all_urls>",
-    "tabs"
-  ],
-  "oauth2": {
-    "client_id": "596447799269-cbapkqimpn3ftplhoci5lgeevqd7s1v3.apps.googleusercontent.com",
-    "scopes": [
-      ""
-    ]
+  "omnibox": {
+    "keyword": "cusail"
   },
-  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
-  "key": "bncchpmlkiilbcadjeocoghgplpndcpp",
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
   "manifest_version": 2,
   "browser_action": {
     "default_icon": {
@@ -40,5 +22,15 @@
     "32": "cusail32.png",
     "48": "cusail48.png",
     "128": "cusail128.png"
+  },
+  "permissions": [
+    "identity"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwKocxJQSlNRqFOeeDoAL1cEhlNHUMplb0UspwVjn+3WnN33Bu8IBA79Karq3Aph9AUQSbFQxfrMaK1vv2PIHPH93D8H4ZkobbEzbvk6FsWhZgU5PpPa+ybzbIEZUNQ3zr++5M8IGGaSqBTXk7fTcD/XnS7DkWnob+OzFsMCIgyPL1xPgb5c5udD9j7BQ5m9Ebz9/nfKE8BRr+Kk6wMzHJpXkf77ff0JM2dF8pTxrIwSSI64Q4bHsL5PMyS3v+Q4ruAJc6njW0A11n+miNf9EOLhTkBHz48lukQsr56rax/eDiYjowMWtQYfPfVmu1Qhm8zPsZGqqfWqnq24BzcjuVQIDAQAB",
+  "oauth2": {
+    "client_id": "596447799269-d03lkm59d9es787m0trloqm3pvs25v5v.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive"
+    ]
   }
 }
